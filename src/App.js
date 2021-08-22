@@ -7,7 +7,7 @@ export const UserNameContext = React.createContext();
 
 function App() {
   return (
-    <UserNameContext.Provider value="Adam">
+    <UserNameContext.Provider value="Jim">
       <main>
         <Header />
         <Content />

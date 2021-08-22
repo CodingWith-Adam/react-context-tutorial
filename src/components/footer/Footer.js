@@ -1,3 +1,5 @@
+import { useContext } from "react";
+
 import FooterBranding from "./FooterBranding";
 import FooterLinks from "./FooterLinks";
 
