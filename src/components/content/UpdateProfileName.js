@@ -1,7 +1,6 @@
 import { useUpdateUserName } from "../context/UserContext";
 import { useUserName } from "../context/UserContext";
 import { useState } from "react";
-import { userEvent } from "@testing-library/user-event";
 
 const UpdateProfileName = () => {
   const updateUserName = useUpdateUserName();

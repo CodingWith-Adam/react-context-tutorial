@@ -1,5 +1,3 @@
-import { useContext } from "react";
-import { UserNameContext } from "../../App";
 import { useUserName } from "../context/UserContext";
 
 const Menu = () => {
