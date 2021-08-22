@@ -1,16 +1,19 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Content from "./components/content/Content";
 
+export const UserNameContext = React.createContext();
+
 function App() {
   return (
-    <main>
-      <Header />
-      <Content />
-      <Footer />
-    </main>
+    <UserNameContext.Provider value="Adam">
+      <main>
+        <Header />
+        <Content />
+        <Footer />
+      </main>
+    </UserNameContext.Provider>
   );
 }
 
