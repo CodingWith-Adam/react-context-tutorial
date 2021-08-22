@@ -1,11 +1,14 @@
 import PromoAd from "./PromoAd";
 import UpdateProfileName from "./UpdateProfileName";
 
-const Content = () => {
+const Content = ({ userName, onUpdateUserName }) => {
   return (
     <>
       <PromoAd />
-      <UpdateProfileName />
+      <UpdateProfileName
+        userName={userName}
+        onUpdateUserName={onUpdateUserName}
+      />
     </>
   );
 };
