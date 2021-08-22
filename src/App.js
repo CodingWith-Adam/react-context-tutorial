@@ -4,8 +4,6 @@ import Footer from "./components/footer/Footer";
 import Content from "./components/content/Content";
 import { UserProvider } from "./components/context/UserContext";
 
-export const UserNameContext = React.createContext();
-
 function App() {
   return (
     <UserProvider value="Adam">
