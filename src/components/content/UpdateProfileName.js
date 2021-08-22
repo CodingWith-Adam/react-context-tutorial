@@ -1,4 +1,18 @@
+import { useUpdateUserName } from "../context/UserContext";
+import { useUserName } from "../context/UserContext";
+import { useState } from "react";
+import { userEvent } from "@testing-library/user-event";
+
 const UpdateProfileName = () => {
+  const updateUserName = useUpdateUserName();
+  const userName = useUserName();
+
+  const [newUserName, setNewUserName] = useState(userName);
+
+  const onUpdateUserName = (e) => {
+    e.preventDefault();
+    updateUserName(newUserName);
+  };
   return (
     <div className="container col-xl-10 col-xxl-8 px-4 py-5">
       <div className="row align-items-center g-lg-5 py-5">
@@ -14,12 +28,17 @@ const UpdateProfileName = () => {
                 className="form-control"
                 id="floatingInput"
                 placeholder="Name"
-                value="Adam"
+                value={newUserName}
+                onChange={(e) => setNewUserName(e.target.value)}
               />
               <label for="floatingInput">Name</label>
             </div>
 
-            <button className="w-100 btn btn-lg btn-primary" type="submit">
+            <button
+              onClick={onUpdateUserName}
+              className="w-100 btn btn-lg btn-primary"
+              type="submit"
+            >
               Update
             </button>
             <hr className="my-4" />
