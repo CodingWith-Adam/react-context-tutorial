@@ -21,5 +21,3 @@ export const UserProvider = ({ value, children }) => {
     </UserNameContext.Provider>
   );
 };
-
-export default UserProvider;
